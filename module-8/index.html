@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sports Player Details</title>
+    <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bac_img">
+      <header>
+        <!-- navbar start -->
+        <div class="navBar n-b">
+          <nav class="navbar navbar-expand-lg">
+            <img
+              src="./img/logo.png"
+              alt=""
+              class="logo"
+              style="margin-top: -30px"
+            />
+
+            <div class="navbar-collapse navList" id="navbarNav">
+              <ul class="navbar-nav" style="margin-top: -50px">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Player</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Log in</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <!-- navbar end -->
+      </header>
+    </div>
+    <div class="container text-center">
+      <div class="player-wapper">
+        <div class="player-search">
+          <h2
+            class="title"
+            style="color: white; font-size: 42px; margin-bottom: 24px"
+          >
+            Search for players
+          </h2>
+          <div class="player-search-box">
+            <input
+              type="text"
+              class="text t_i"
+              placeholder="Enter the  player name"
+              id="inputName"
+            />
+            <button id="button_s" type="submit" class="search-btn btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <div class="res">Your search result</div>
+          <div id="message" style="display: none">
+            <h3>Sorry!! No player found.</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <div id="player"></div>
+            </div>
+            <div class="col-4">
+              <div
+                class="cart"
+                style="
+                  border: 1px solid #d1d1d1;
+                  padding: 5px;
+                  margin-bottom: 20px;
+                  margin-top: 50px;
+                "
+              >
+                <div class="cart-summary">
+                  <i
+                    class="fa-solid fa-user"
+                    style="
+                      font-size: 30px;
+                      margin-top: 10px;
+                      margin-bottom: 10px;
+                    "
+                  ></i>
+                  <h6>Cart Count: <span id="cart-count">0</span></h6>
+                </div>
+                <div class="cart-items" id="cart-items"></div>
+              </div>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="cartLimitModal"
+                tabindex="-1"
+                aria-labelledby="cartModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="cartLimitModalLabel">
+                        Player Limit Reached
+                      </h5>
+                    </div>
+                    <div class="modal-body">
+                      You cannot add more than 11 players to the cart.
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="details" id="details"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="logo-box">
+          <img src="./img/logo.png" alt="" class="logo" />
+        </div>
+        <div class="useful-links">
+          <h3 class="footer-title">Useful Links</h3>
+          <p>About Us</p>
+          <p>Player</p>
+          <p>News & Article</p>
+        </div>
+        <div class="support">
+          <h3 class="footer-title">Supports</h3>
+          <p>Help Center</p>
+          <p>Contact Us</p>
+          <p>FAQ</p>
+        </div>
+        <div class="contact">
+          <h3 class="footer-title">Contact Information</h3>
+          <p>Feel free to contact & reach us !!</p>
+          <p>+1(456)657-887</p>
+          <p>info@domain.com</p>
+        </div>
+      </div>
+
+      <p class="copy">
+        <small>Copyright &copy; 2024 Agence. All rights reserved.</small>
+      </p>
+    </footer>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
